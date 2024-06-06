@@ -1,3 +1,21 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
 .carousel {
     width: 80%;
     margin: 40px auto;
@@ -6,30 +24,48 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-inner {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .carousel-item {
-    flex: 0 0 25%;
+    flex: 0 0 100%;
+    max-width: 100%;
     margin: 10px;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    text-align: center;
 }
 
-.carousel-prev,.carousel-next {
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-prev, .carousel-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
     cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
 }
 
 .carousel-prev {
@@ -48,12 +84,18 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 #order-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.order-form form {
+    display: inline-block;
+    text-align: left;
 }
 
 #send-order {
