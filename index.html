@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos Caseiros</title>
+    <title>Dada Produtos Artesanais</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <h1>Produtos Artesanais</h1>
+    <header class="banner">
+        <div class="logo-container">
+            <img src="./_img/logo.jpg" alt="Logo" class="logo">
+        </div>
+        <p class="header-title">Produtos Artesanais</p>
     </header>
-
-    <main>
+            <main>
         <section class="carousel">
             <div class="carousel-inner">
+                <!-- Carrossel de produtos -->
                 <div class="carousel-item active">
                     <img src="produto1.jpg" alt="Produto 1">
                     <h2>Produto 1</h2>
@@ -27,6 +29,7 @@
                     <p>Descrição do produto 2</p>
                     <button class="btn-add-cart">Adicionar ao carrinho</button>
                 </div>
+                <!-- Adicione mais produtos aqui -->
             </div>
             <button class="carousel-prev" aria-label="Previous slide">‹</button>
             <button class="carousel-next" aria-label="Next slide">›</button>

@@ -1,4 +1,3 @@
-// script.js
 // Carrossel de produtos
 const carouselInner = document.querySelector('.carousel-inner');
 const carouselItems = document.querySelectorAll('.carousel-item');
@@ -24,6 +23,6 @@ sendOrderButton.addEventListener('click', (e) => {
     const phone = document.getElementById('phone').value;
     const products = document.getElementById('products').value;
 
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=5511962507584&text=Olá!%20Eu%20gostaria%20de%20fazer%20um%20pedido:%20${products}%20-%20${name}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=55${phone}&text=Olá!%20Eu%20gostaria%20de%20fazer%20um%20pedido:%20${products}%20-%20${name}`;
     window.open(whatsappUrl, '_blank');
 });

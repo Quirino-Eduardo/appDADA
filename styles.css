@@ -1,19 +1,33 @@
-header {
+.banner {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.062);
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Posiciona os elementos à esquerda e à direita */
     padding: 20px;
 }
 
-.logo {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
+.logo-container {
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.logo {
+    width: 100%; /* Ajusta o tamanho da logo */
+    height: 100%; /* Ajusta o tamanho da logo */
+    border-radius: 10px;
+}
+
+.header-title {
     font-size: 24px;
     margin: 0;
+    opacity: 0.8; /* Opacidade de 20% */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .carousel {
