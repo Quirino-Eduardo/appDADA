@@ -9,12 +9,12 @@
 <body>
     <header>
         <img src="logo.png" alt="Logo" class="logo">
-        <h1>Produtos Caseiros</h1>
+        <h1>Produtos Artesanais</h1>
     </header>
+
     <main>
         <section class="carousel">
             <div class="carousel-inner">
-                <!-- Carrossel de produtos -->
                 <div class="carousel-item active">
                     <img src="produto1.jpg" alt="Produto 1">
                     <h2>Produto 1</h2>
@@ -27,20 +27,19 @@
                     <p>Descrição do produto 2</p>
                     <button class="btn-add-cart">Adicionar ao carrinho</button>
                 </div>
-                <!-- Adicione mais produtos aqui -->
             </div>
-            <button class="carousel-prev">‹</button>
-            <button class="carousel-next">›</button>
+            <button class="carousel-prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-next" aria-label="Next slide">›</button>
         </section>
         <section class="order-form">
             <h2>Faça seu pedido</h2>
             <form id="order-form">
                 <label for="name">Nome:</label>
-                <input type="text" id="name" name="name"><br><br>
+                <input type="text" id="name" name="name" required><br><br>
                 <label for="phone">Telefone:</label>
-                <input type="tel" id="phone" name="phone"><br><br>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,11}"><br><br>
                 <label for="products">Produtos:</label>
-                <textarea id="products" name="products"></textarea><br><br>
+                <textarea id="products" name="products" required></textarea><br><br>
                 <button id="send-order">Enviar pedido via WhatsApp</button>
             </form>
         </section>

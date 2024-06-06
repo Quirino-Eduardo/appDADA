@@ -27,27 +27,3 @@ sendOrderButton.addEventListener('click', (e) => {
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5511962507584&text=Olá!%20Eu%20gostaria%20de%20fazer%20um%20pedido:%20${products}%20-%20${name}`;
     window.open(whatsappUrl, '_blank');
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const prevBtn = document.querySelector('.carousel-prev');
-    const nextBtn = document.querySelector('.carousel-next');
-    const items = document.querySelectorAll('.carousel-item');
-    let currentIndex = 0;
-
-    function showItem(index) {
-        items.forEach((item, i) => {
-            item.classList.toggle('active', i === index);
-        });
-    }
-
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
-        showItem(currentIndex);
-    });
-
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-        showItem(currentIndex);
-    });
-
-    showItem(currentIndex);
-});
