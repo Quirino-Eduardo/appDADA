@@ -6,7 +6,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Posiciona os elementos à esquerda e à direita */
+    justify-content: center; /* Centraliza o conteúdo do banner */
     padding: 20px;
 }
 
@@ -28,6 +28,7 @@
     margin: 0;
     opacity: 0.8; /* Opacidade de 20% */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 
 .carousel {
