@@ -1,34 +1,43 @@
-// Carrossel de produtos
-const carouselInner = document.querySelector('.carousel-inner');
-const carouselItems = document.querySelectorAll('.carousel-item');
-let currentIndex = 0;
+// Get the cart element
+const cart = document.getElementById('cart');
 
-document.querySelector('.carousel-prev').addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
-    updateCarousel();
+// Get the product elements
+const products = document.querySelectorAll('.carousel-item');
+
+// Add event listener to each product button
+products.forEach((product) => {
+  const button = product.querySelector('.btn-add-cart');
+  button.addEventListener('click', () => {
+    // Get the product details
+    const productName = product.querySelector('h2').textContent;
+    const productPrice = product.querySelector('p').textContent;
+    const productImage = product.querySelector('img').src;
+
+    // Create a new cart item element
+    const cartItem = document.createElement('div');
+    cartItem.className = 'cart-item';
+    cartItem.innerHTML = `
+      <img src="${productImage}" alt="${productName}">
+      <h2>${productName}</h2>
+      <p>${productPrice}</p>
+      <button class="remove-from-cart">Remover</button>
+    `;
+
+    // Add the cart item to the cart
+    cart.appendChild(cartItem);
+
+    // Update the cart total
+    updateCartTotal();
+  });
 });
 
-document.querySelector('.carousel-next').addEventListener('click', () => {
-    currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
-    updateCarousel();
-});
-
-function updateCarousel() {
-    carouselItems.forEach((item, index) => {
-        item.classList.toggle('active', index === currentIndex);
-    });
+// Function to update the cart total
+function updateCartTotal() {
+  const cartItems = cart.querySelectorAll('.cart-item');
+  let total = 0;
+  cartItems.forEach((item) => {
+    const price = item.querySelector('p').textContent;
+    total += parseFloat(price);
+  });
+  document.getElementById('cart-total').textContent = `Total: R$ ${total.toFixed(2)}`;
 }
-
-// Integração de formulário para pedidos via WhatsApp
-const orderForm = document.getElementById('order-form');
-const sendOrderButton = document.getElementById('send-order');
-
-sendOrderButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const products = document.getElementById('products').value;
-
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=+5511962507584&text=Olá!%20Eu%20gostaria%20de%20fazer%20um%20pedido:%20${products}%20-%20${name}%20-%20Telefone:%20${phone}`;
-    window.open(whatsappUrl, '_blank');
-});
