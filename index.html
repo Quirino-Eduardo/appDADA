@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dada Produtos Artesanais</title>
+    <title>Dada Produtos Artesanais - Home</title>
+    <meta name="author" content="Your Name">
     <link rel="stylesheet" href="styles.css">
+    <link rel="favicon" href="favicon.ico">
 </head>
 <body>
     <header class="banner">
         <div class="logo-container">
-            <img src="/logo.png" alt="Logo" class="logo">
+            <img src="/logo.png" alt="Logo Dada Produtos Artesanais" class="logo">
         </div>
         <p class="header-title">Produtos Artesanais</p>
     </header>
@@ -17,32 +19,39 @@
         <section class="carousel">
             <div class="carousel-inner">
                 <!-- Carrossel de produtos -->
-                <div class="carousel-item active">
+                <figure class="carousel-item active">
                     <img src="produto1.jpg" alt="Produto 1">
-                    <h2>Produto 1</h2>
-                    <p>Descrição do produto 1</p>
-                    <button class="btn-add-cart">Adicionar ao carrinho</button>
-                </div>
-                <div class="carousel-item">
+                    <figcaption>
+                        <h2>Produto 1</h2>
+                        <p>Descrição do produto 1</p>
+                        <button class="btn-add-cart">Adicionar ao carrinho</button>
+                    </figcaption>
+                </figure>
+                <figure class="carousel-item">
                     <img src="produto2.jpg" alt="Produto 2">
-                    <h2>Produto 2</h2>
-                    <p>Descrição do produto 2</p>
-                    <button class="btn-add-cart">Adicionar ao carrinho</button>
-                </div>
+                    <figcaption>
+                        <h2>Produto 2</h2>
+                        <p>Descrição do produto 2</p>
+                        <button class="btn-add-cart">Adicionar ao carrinho</button>
+                    </figcaption>
+                </figure>
                 <!-- Adicione mais produtos aqui -->
             </div>
-            <button class="carousel-prev" aria-label="Previous slide">‹</button>
-            <button class="carousel-next" aria-label="Next slide">›</button>
+            <button class="carousel-prev" aria-label="Previous slide" aria-hidden="true">‹</button>
+            <button class="carousel-next" aria-label="Next slide" aria-hidden="true">›</button>
         </section>
         <section class="order-form">
             <h2>Faça seu pedido</h2>
             <form id="order-form">
                 <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required><br><br>
+                <input type="text" id="name" name="name" required>
+                <br><br>
                 <label for="phone">Telefone:</label>
-                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,11}"><br><br>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,11}">
+                <br><br>
                 <label for="products">Produtos:</label>
-                <textarea id="products" name="products" required></textarea><br><br>
+                <textarea id="products" name="products" required></textarea>
+                <br><br>
                 <button id="send-order">Enviar pedido via WhatsApp</button>
             </form>
         </section>
