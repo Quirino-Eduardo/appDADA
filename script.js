@@ -46,7 +46,7 @@ function updateCartTotal() {
 const header = document.querySelector('header');
 const contato = document.createElement('div');
 contato.innerHTML = `
-  <p>Nome: Dalva</p>
+  <p style="margin-bottom: 20px;">Nome: Dalva</p>
   <p>Celular: 1196250-7584</p>
 `;
 header.appendChild(contato);
