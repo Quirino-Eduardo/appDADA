@@ -41,3 +41,12 @@ function updateCartTotal() {
   });
   document.getElementById('cart-total').textContent = `Total: R$ ${total.toFixed(2)}`;
 }
+
+// Add contato information below the header title
+const header = document.querySelector('header');
+const contato = document.createElement('div');
+contato.innerHTML = `
+  <p>Nome: Dalva</p>
+  <p>Celular: 1196250-7584</p>
+`;
+header.appendChild(contato);
