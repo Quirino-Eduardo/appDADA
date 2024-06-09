@@ -41,8 +41,19 @@ addToCartButtons.forEach((button) => {
         const product = e.target.closest('.carousel-item');
         const productName = product.querySelector('h2').textContent;
         const productDescription = product.querySelector('p').textContent;
+        const productPrice = product.querySelector('label[for="product-price"]').textContent;
+
+        // Mostrar produto selecionado na tela
+        const selectedProductContainer = document.getElementById('selected-product');
+        selectedProductContainer.innerHTML = `
+          <h2>${productName}</h2>
+          <p>${productDescription}</p>
+          <p>Preço: R$ ${productPrice}</p>
+        `;
+
+        // Adicionar ao carrinho
         const cartItem = document.createElement('li');
-        cartItem.textContent = `${productName} - ${productDescription}`;
+        cartItem.textContent = `${productName} - ${productDescription} - R$ ${productPrice}`;
         document.getElementById('cart').appendChild(cartItem);
     });
 });
