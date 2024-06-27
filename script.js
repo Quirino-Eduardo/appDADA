@@ -4,12 +4,12 @@ const carouselItems = document.querySelectorAll('.carousel-item');
 let currentIndex = 0;
 
 document.querySelector('.carousel-prev').addEventListener('click', () => {
-    currentIndex = (currentIndex > 0)? currentIndex - 1 : carouselItems.length - 1;
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
     updateCarousel();
 });
 
 document.querySelector('.carousel-next').addEventListener('click', () => {
-    currentIndex = (currentIndex < carouselItems.length - 1)? currentIndex + 1 : 0;
+    currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
     updateCarousel();
 });
 

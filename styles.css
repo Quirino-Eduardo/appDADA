@@ -88,7 +88,8 @@
     display: block;
 }
 
-.carousel-prev,.carousel-next {
+.carousel-prev,
+.carousel-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -173,4 +174,6 @@
 @media screen and (max-width: 740px) {
     .carousel {
         width: 100%;
-        padding: 20px;}}
+        padding: 20px;
+    }
+}
