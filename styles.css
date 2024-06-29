@@ -109,7 +109,10 @@
 .carousel-next {
     right: 10px;
 }
-
+#img-produto{
+    width: 180px;
+    height: 180px;
+}
 .order-form {
     width: 80%;
     margin: 40px auto;
